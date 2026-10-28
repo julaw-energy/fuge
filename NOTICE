@@ -1,0 +1,36 @@
+fuge
+Copyright 2026 Julaw Energy
+
+This product includes software originally developed as part of
+mitresthen/asyncapi3 (https://github.com/mitresthen/asyncapi3),
+licensed under the Apache License, Version 2.0. That project carried
+no NOTICE file of its own at the version this was derived from.
+
+The following files are derived from that project:
+
+    asyncapi3.go
+    check.go
+    extensions.go
+    merge.go
+    reflect.go
+    security.go
+    validate/validate.go
+    validate/asyncapi-3.1.0.json
+
+Modifications made here include:
+
+  - Security schemes: SecurityScheme, OAuthFlows, OAuthFlow,
+    Components.SecuritySchemes, and SpecOperation.Security (Operation
+    in the original), covering all nine scheme types the specification
+    defines.
+  - Extensions: a generic "x-" specification-extension mechanism
+    (type Extensions) carried on every major document object.
+  - AsyncAPI 3.1.0 support, and later, a breaking change making 3.1.0
+    the only version this package emits and validates against.
+  - Renamed Operation to SpecOperation to resolve a naming collision
+    after merging this code with an in-house RPC registration layer
+    into a single package.
+
+All other files in this package were written for this project and are
+licensed, like the files above, under the Apache License, Version 2.0
+(see LICENSE).
