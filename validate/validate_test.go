@@ -1,9 +1,9 @@
 package validate_test
 
 import (
+	"encoding/json"
 	"github.com/julaw-energy/fuge"
 	"github.com/julaw-energy/fuge/validate"
-	"encoding/json"
 	"strings"
 	"testing"
 )

@@ -263,6 +263,27 @@ RPC layers together (a `Register`'d, `Group`-nested operation reachable
 under its full prefixed name, documented under that same name, with its
 `Timeout` actually reaching the router).
 
+## The interactive reference
+
+`api.ServeDocs(mux)` mounts a browser UI at `/asyncdocs/`: every method and channel with its request, reply and error
+schemas, a **Try it** client that connects to your WebSocket and sends real requests, and copy-paste snippets for
+centrifuge-js. No build step, no extra dependencies. Run `go run ./example/showcase` and open
+`http://localhost:8080/asyncdocs/` to click through it yourself (`-port` to change).
+
+![Overview](docs/img/overview.png)
+
+**Try it** sends a real RPC and shows the reply and timing:
+
+![Try it, successful reply](docs/img/try-it-response.png)
+
+Errors come back the way a client sees them (here `get-task` with an unknown id):
+
+![Try it, error reply](docs/img/try-it-error.png)
+
+Channels get a live feed: subscribe and watch publications arrive.
+
+![Live channel feed](docs/img/channel-live.png)
+
 ## Install
 
 ```
